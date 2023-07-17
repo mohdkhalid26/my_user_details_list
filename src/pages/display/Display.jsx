@@ -23,7 +23,7 @@ function Display({ editData }) {
 
   useEffect(() => {
     getData();
-    setTimeout(getData(), 1000);
+    setTimeout(getData(), 2000);
   }, []);
 
   // const deleteAllData = () => {};
