@@ -20,11 +20,13 @@ function Display({ editData }) {
       .get("https://64aed2f2c85640541d4dc55b.mockapi.io/product")
       .then((res) => setData(res.data));
   };
+
   useEffect(() => {
     getData();
+    setTimeout(getData(), 1000);
   }, []);
 
-  const deleteAllData = () => {};
+  // const deleteAllData = () => {};
 
   return (
     <Container fluid className="display">
@@ -98,7 +100,7 @@ function Display({ editData }) {
             })
           : null}
       </Table>
-      <Button
+      {/* <Button
         className="deleteallbtn"
         onClick={() => {
           deleteAllData();
@@ -107,7 +109,7 @@ function Display({ editData }) {
       >
         {" "}
         Delete All{" "}
-      </Button>
+      </Button> */}
     </Container>
   );
 }
