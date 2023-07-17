@@ -100,16 +100,6 @@ function Display({ editData }) {
             })
           : null}
       </Table>
-      {/* <Button
-        className="deleteallbtn"
-        onClick={() => {
-          deleteAllData();
-        }}
-        variant="danger"
-      >
-        {" "}
-        Delete All{" "}
-      </Button> */}
     </Container>
   );
 }
