@@ -29,10 +29,10 @@ function Create({ isEdit, name, email, number, id }) {
       number: userNumber,
     });
     setIsReq(false);
-    navigate("/");
     setUserName("");
     setUserEmail("");
     setUserNumber("");
+    navigate("/");
   };
 
   const updateData = () => {
@@ -43,10 +43,10 @@ function Create({ isEdit, name, email, number, id }) {
     });
     setIsEdit3(false);
     setIsReq(false);
-    navigate("/");
     setUserName("");
     setUserEmail("");
     setUserNumber("");
+    navigate("/");
   };
 
   useEffect(() => {}, []);

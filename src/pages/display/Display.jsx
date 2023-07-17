@@ -9,6 +9,12 @@ function Display({ editData }) {
   // const [isEdit, setIsEdit] = useState(true);
   const [data, setData] = useState([]);
 
+  const deleteData = (id) => {
+    axios
+      .delete(`https://64aed2f2c85640541d4dc55b.mockapi.io/product/${id}`)
+      .then(() => getData());
+  };
+
   const getData = () => {
     axios
       .get("https://64aed2f2c85640541d4dc55b.mockapi.io/product")
@@ -17,12 +23,6 @@ function Display({ editData }) {
   useEffect(() => {
     getData();
   }, []);
-
-  const deleteData = (id) => {
-    axios
-      .delete(`https://64aed2f2c85640541d4dc55b.mockapi.io/product/${id}`)
-      .then(() => getData());
-  };
 
   const deleteAllData = () => {};
 
